@@ -250,3 +250,67 @@
     
 //     name.value=""
 // })
+// async function getData(){
+//     try {
+//         const response= await fetch("https://jsonplaceholder.typicode.com/posts")
+//         if(response.ok===false){
+//             throw new Error("something went wrong")
+//         }
+//         const data= await response.json()
+//         console.log(data)
+//         data.products.forEach((product)=>{
+//     })
+//     } catch (error) {
+//         console.log(error)
+//     }finally{
+//         console.log("finaalyback")
+//     }  
+// }
+
+// getData()     
+
+// async function sendData(){
+//     const response=await fetch('https://dummyjson.com/products/add',{
+//         method:"POST",
+//         headers:{
+//             "Content-Type":"application/json"
+//     },
+//         body:JSON.stringify({
+//             title:"Test Product",
+//             price:100,
+//             description:"This is a test product",
+//             rating:4.5,
+//             stock:10,
+//             brand:"Test Brand",
+//             category:"Test Category"
+//         })
+//     })
+
+//     const data= await response.json()
+//     console.log(data)
+// }
+
+// sendData() 
+
+// let obj={
+//     name:"John",
+//     age:30,
+//     city:"New York"
+// }
+// console.log(JSON.stringify(obj))
+
+// localStorage.setItem("name","Alex")
+// localStorage.setItem("age",45)
+
+// console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("age"))
+
+// localStorage.removeItem("name")
+// console.log(localStorage.getItem("name"))
+
+// sessionStorage.setItem("name","Alex")
+// sessionStorage.setItem("age",45)
+
+// console.log(sessionStorage.getItem("name"))
+// console.log(sessionStorage.getItem("age"))
+    
