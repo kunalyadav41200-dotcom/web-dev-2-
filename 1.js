@@ -1,28 +1,4 @@
-// .btn{
-
-// border: 2px solid black;
-// width: 100px;
-// height: 40px;
-// background-color: rgb(9, 28, 242);
-
-// }
-
-// .submit{
-
-//     border-radius: 10px;
-// }
-
-// li{
-//    width: 200px;
-//    background-color: rgb(158, 182, 237);
-//    display: flex;
-//    justify-content: space-between;
-//     margin: 5px;
-//    padding: 5px;
-    
-    
-   
-// } // console.log("Hello, World!");
+// console.log("Hello, World!");
 // console.log(document)
 
 // const para = document.querySelector("p")
@@ -250,67 +226,293 @@
     
 //     name.value=""
 // })
+
+
+
+// function greet(){ // callback function
+//     setTimeout(() => {
+//     console.log("Hello students!")
+// }, 2000)
+//     print(45)
+// }
+
+// function print(num){ //higher order function
+//     console.log("total students are ",num)
+// }
+// greet(print)
+
+
+
+
+// console.log("Starting homework...");
+
+// setTimeout(() => {
+
+// console.log ("Homework done!");
+
+// console.log("Starting dinner...");
+
+// setTimeout(() => {
+
+// console.log("Dinner done!");
+
+// console.log("Getting ready to go out...");
+
+// setTimeout(() => {
+
+// console.log("Going to the playground!");
+
+// }, 1000); // after dinner
+
+// }, 1500); // dinner time
+
+// }, 2000); // homework time
+
+// function finishHomework(callback) {
+// console.log("Starting homework...");
+// setTimeout(() => {
+//     console.log("Homework done!");
+//     callback();
+// }, 2000);
+// }
+
+
+
+
+
+// function finishHomework(callback) {
+
+// }
+
+// console.log("Starting homework...");
+
+// setTimeout(() => { callback();
+
+// console.log("Homework done!");
+
+// }, 2000);
+
+// function eatDinner (callback) {
+
+// console.log("Starting dinner...");
+
+// } setTimeout(() => { console.log("Dinner done!"); callback();
+
+// }, 1500);
+
+// function goToPlayground() {
+
+// console.log("Going to the playground!"); }
+
+// // Chained in steps, but cleaner
+
+// finishHomework(() => {
+
+// eatDinner(() => { goToPlayground(); });
+
+// });
+
+
+// const p = new Promise((res,rej)=>{
+//     let done=false
+//     setTimeout(()=>{
+//         if(done){
+//             res("work is done!!")
+//         }else{
+//             rej("work is not done")
+//         }
+//     },5000)
+// })
+// console.log(p)
+
+
+
+// function doHomework(){
+//     const p = new Promise((resolve,reject) =>{
+//         setTimeout(() => {
+//             let homeworkDone = true;
+//             if (homeworkDone){
+//                 console.log("homework is done");
+//                 resolve("homework complete");
+//             } else {
+//                 reject("homework not done");
+//             }
+//         },2000);
+//     });
+// }
+
+
+// function eatDinner(){
+//     const p=new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             let done=true
+//             if(done){
+//                 console.log("dinner is done")
+//                 res("dinner is complete")
+//             }else{
+//                 rej("dinner not complete")
+//             }
+//             },2000)
+//         })
+//         return p    
+//      }
+
+
+// function goToPlayground(){
+//     const p=new Promise((res,rej) =>{
+//         setTimeout(()=>{
+//             let done=true
+//             if(done){
+//                 console.log("went to playground")
+//                 res("playground time")
+//             }else{
+//                 rej("not allowed")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
+
+
+// doHomework().then((msg)=>{
+//     console.log(msg)
+//     return eatDinner()
+// }).then((msg)=>{
+//     console.log(msg)
+// }).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("go to sleep")
+// })
+
+
+
+// function orderFood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log("food ordered")
+//             res()
+//         },2000)
+//     })
+// }
+
+// function prepareFood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log("food prepared")
+//             res()
+//         },2000)
+//     })
+// }
+
+// function deliverFood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log("food Deliverd")
+//             res()
+//         },2000)
+//     })
+// }
+
+// async function order(){
+//     const data = await orderFood()
+//     console.log(data)
+//     await prepareFood()
+//     await deliverFood()
+// }
+
+// order()
+
+// orderFood().then((data)=>{
+//     return prepareFood()
+// }).then((data)=>{
+//     return deliverFood()
+// }).then((data)=>{
+// }).catch((err)=>{
+//     console.log("something went wrong")
+// })
+
+
+// console.log("first line")
+// try{
+//     let sample = 234
+//     console.log(sample)
+//     let age = 16
+//     if(age<16){
+//         throw new error("you are not eligible to vote")
+//         // console.log("line after sample")
+//         //
+//         //
+//     }
+//     /////
+//     console.log("line after sample")
+// }catch(e){
+//     console.warn(e)
+//     console.error(e)
+//     console.log(e)
+// }
+// console.log("last line")
+
+
 // async function getData(){
-//     try {
-//         const response= await fetch("https://jsonplaceholder.typicode.com/posts")
+//     const response=await fetch("https://dummyjson.com/products")
+//     const data=await response.json()
+//     //console.log(datsa.products[0].title)
+//     data.products.forEach((product)=>{
+//         console.log(product.title)
+//     })
+// }
+// getData()
+
+
+// async function getData(){
+//     try{
+//         const response=await fetch("https://dummyjson.com/products")
 //         if(response.ok===false){
 //             throw new Error("something went wrong")
 //         }
-//         const data= await response.json()
-//         console.log(data)
-//         data.products.forEach((product)=>{
-//     })
-//     } catch (error) {
-//         console.log(error)
-//     }finally{
-//         console.log("finaalyback")
-//     }  
-// }
-
-// getData()     
-
-// async function sendData(){
-//     const response=await fetch('https://dummyjson.com/products/add',{
-//         method:"POST",
-//         headers:{
-//             "Content-Type":"application/json"
-//     },
-//         body:JSON.stringify({
-//             title:"Test Product",
-//             price:100,
-//             description:"This is a test product",
-//             rating:4.5,
-//             stock:10,
-//             brand:"Test Brand",
-//             category:"Test Category"
-//         })
-//     })
-
-//     const data= await response.json()
+//     const data=await response.json()
 //     console.log(data)
+//     //console.log(datsa.products[0].title)
+//     data.products.forEach((product)=>{
+//         console.log(product.title)
+//     })
+// }catch(err){
+//     console.log(err)
+// }
+// }
+// getData()
+
+
+// function* generate(){
+//     // yield 1
+//     // yield 2
+//     // yield 3
+//     let index=25017343
+//     while(true){
+//         yield index
+//         index++
+//     }
 // }
 
-// sendData() 
+// const gen=generate()
+// console.log(gen)
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
 
-// let obj={
-//     name:"John",
-//     age:30,
-//     city:"New York"
+// function add(a){
+//     return function(b){
+//         return function(c){
+//             return a+b+c
+//         }
+//     }
 // }
-// console.log(JSON.stringify(obj))
+// const first=add(1)
+// console.log(first)
+// const second=first(2)
+// console.log(second)
+// console.log(second(3))
 
-// localStorage.setItem("name","Alex")
-// localStorage.setItem("age",45)
-
-// console.log(localStorage.getItem("name"))
-// console.log(localStorage.getItem("age"))
-
-// localStorage.removeItem("name")
-// console.log(localStorage.getItem("name"))
-
-// sessionStorage.setItem("name","Alex")
-// sessionStorage.setItem("age",45)
-
-// console.log(sessionStorage.getItem("name"))
-// console.log(sessionStorage.getItem("age"))
-    
+// console.log(add(1)(2)(3))
