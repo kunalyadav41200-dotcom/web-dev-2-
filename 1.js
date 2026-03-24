@@ -431,7 +431,18 @@
 // }).catch((err)=>{
 //     console.log("something went wrong")
 // })
-
+function renderHistory() {
+    historyDiv.innerHTML = "";
+    searchHistory.forEach(city => {
+        const btn = document.createElement("button");
+        btn.textContent = city;
+        btn.onclick = () => {
+            cityInput.value = city;
+            form.dispatchEvent(new Event("submit"));
+        };
+        historyDiv.appendChild(btn);
+    });
+}
 
 // console.log("first line")
 // try{
