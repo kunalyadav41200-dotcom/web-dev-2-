@@ -516,3 +516,15 @@
 // console.log(second(3))
 
 // console.log(add(1)(2)(3))
+// function renderHistory() {
+//     historyDiv.innerHTML = "";
+//     searchHistory.forEach(city => {
+//         const btn = document.createElement("button");
+//         btn.textContent = city;
+//         btn.onclick = () => {
+//             cityInput.value = city;
+//             form.dispatchEvent(new Event("submit"));
+//         };
+//         historyDiv.appendChild(btn);
+//     });
+// }
