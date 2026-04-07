@@ -19,3 +19,5 @@ function Menu(props) {
 }
 
 export default Menu
+
+import React from 'react'  
