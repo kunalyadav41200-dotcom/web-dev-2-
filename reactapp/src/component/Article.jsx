@@ -1,4 +1,11 @@
-import React from 'react'
+import React, { use } from 'react'
+import ArtStyle from './Article.module.css'
+import styled from 'styled-components'
+import styled from "@emotion/styled"
+
+function Article(props) {
+    const[count,setCount]=useState(0)
+}
 function Article() {
     const handleIncrement = () => {
         setCount(count+1)
@@ -12,3 +19,10 @@ function Article() {
     )
 }
 export default Article 
+
+const Button=styled.Button`
+    background-color: ${props=>props.primary ? "red" : "pink"};
+    color:white;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;`
