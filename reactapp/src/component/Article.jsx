@@ -26,3 +26,12 @@ const Button=styled.Button`
     border-radius: 10px;
     height: 30px;
     width: 100px;`
+export default Article
+
+const Button=styled.button` 
+    background-color: ${props=>props.primary ? "red" : "pink"};
+    color:white;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;`
+export default Article
