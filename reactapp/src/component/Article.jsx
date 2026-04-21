@@ -54,3 +54,14 @@ useState(()=>{
 }
  fetchData()
 },[])
+function Article(props) {
+    const[count,setCount]=useState(0)
+    const[age,setAge]=useState(0)
+    const[name,setName]=useState("Alex")
+    const myRef=useRef()
+
+    useEffect(()=>{
+        console.log("component Mounted")
+        return ()=>{
+            console.log("component Unmounted")
+        }
