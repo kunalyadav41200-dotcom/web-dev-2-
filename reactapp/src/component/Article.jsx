@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React, { use, useEffect } from 'react'
 import ArtStyle from './Article.module.css'
 import styled from 'styled-components'
 import styled from "@emotion/styled"
@@ -34,4 +34,23 @@ const Button=styled.button`
     border-radius: 10px;
     height: 30px;
     width: 100px;`
-export default Article
+export default Article 
+useEffect(()=>{
+    console.log("component Mounted")
+},[name])
+const handleIncrement = () => {
+    setCount(count+1)
+    console.log(count)
+}
+useEffect(()=>{
+    console.log("component Mounted")
+    return()=>{
+        console.log("component Unmounted")
+    }       
+},[name])
+useState(()=>{
+    const fetchData=async()=>{
+    console.log("Data Fetched")
+}
+ fetchData()
+},[])
