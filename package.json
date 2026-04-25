@@ -1,8 +1,31 @@
 {
+  "name": "web-dev-2-",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/kunalyadav41200-dotcom/web-dev-2-#readme",
+  "bugs": {
+    "url": "https://github.com/kunalyadav41200-dotcom/web-dev-2-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunalyadav41200-dotcom/web-dev-2-.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "1.js",
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+},
   "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
     "@tailwindcss/vite": "^4.2.2",
     "components": "^0.1.0",
-    "styled": "^1.0.0",
-    "tailwindcss": "^4.2.2"
+    "styled": "^1.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.2.4"
   }
 }
