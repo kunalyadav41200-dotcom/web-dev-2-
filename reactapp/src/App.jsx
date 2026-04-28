@@ -7,19 +7,19 @@ import Contact from './component/Contact'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
-  const[data,setData]=useState("Sample data")
+  const [data, setData] = useState("Sample data")
   return (
     <>
+      <UserContext.Provider value={name}>
+        <Routes>
+          <Route path="/article" element={<Article data={data} />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<><Homepage /><Menu /></>} />
+          <Route path="/profile/:username" element={<Profile />} />
+        </Routes>
 
-      <Routes>
-        <Route path="/article" element={<Article data={data} />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/" element={<><Homepage /><Menu/></>} />
-        <Route path="/profile/:username" element={<Profile />} />
-      </Routes>
-      
-    </>
-  )
+      </>
+      )
 }
 
-export default App
+      export default App
