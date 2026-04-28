@@ -15,6 +15,7 @@ function App() {
         <Route path="/article" element={<Article data={data} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/" element={<><Homepage /><Menu/></>} />
+        <Route path="/profile/:username" element={<Profile />} />
       </Routes>
       
     </>
