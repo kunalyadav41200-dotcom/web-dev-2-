@@ -17,6 +17,7 @@ function App() {
           <Route path="/" element={<><Homepage /><Menu /></>} />
           <Route path="/profile/:username" element={<Profile />} />
         </Routes>
+        </UserContext.Provider>
 
       </>
       )
